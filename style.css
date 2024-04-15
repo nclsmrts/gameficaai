@@ -98,6 +98,40 @@ header img {
 
 }
 
+.conteudo-banner span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 6px solid var(--laranja-gamefica);
+    animation: 
+    digitando 2s steps(40,end),
+    cursor 0.75s step-end infinite
+    ;
+}
+
+@keyframes digitando {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+
+}
+
+@keyframes cursor {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--laranja-gamefica);
+    }
+}
+
 #sobre {
 
     height: 800px;
@@ -354,4 +388,49 @@ h2 {
 
 #contato form button:hover {
     background-color: #ad4929;
+}
+
+#contato form input::placeholder,
+#contat form textarea::placeholder {
+    color: #b9b9b9;
+}
+
+footer {
+    height: 290px;
+    background-color: var(--roxo-gamefica);
+}
+
+footer .container-grid {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    align-items: flex-end;
+}
+
+.redes-sociais p {
+    color: white;
+    font-family: "Anta";
+    font-size: 24px;
+}
+
+.icones-redes {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+    color: white;
+}
+
+.icones-redes a:hover {
+    color: var(--laranja-gamefica);
 }
