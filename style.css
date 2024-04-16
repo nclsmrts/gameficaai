@@ -56,6 +56,10 @@ header img {
     width: 290px;
 }
 
+header button {
+    display: none;
+}
+
 .menu {
 
     width: 700px;
@@ -103,10 +107,9 @@ header img {
     white-space: nowrap;
     overflow: hidden;
     border-right: 6px solid var(--laranja-gamefica);
-    animation: 
-    digitando 2s steps(40,end),
-    cursor 0.75s step-end infinite
-    ;
+    animation:
+        digitando 2s steps(40, end),
+        cursor 0.75s step-end infinite;
 }
 
 @keyframes digitando {
@@ -433,4 +436,87 @@ footer .container-grid {
 
 .icones-redes a:hover {
     color: var(--laranja-gamefica);
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+        display: unset;
+        background: none;
+        border: none;
+
+    }
+
+    header svg {
+        fill: white;
+    }
+
+    nav.menu {
+        flex-direction: column;
+        background-color: #000000f0;
+        height: 500px;
+        width: 350px;
+        position: absolute;
+        top: 165px;
+        right: 0;
+        padding: 0px 30px;
+        justify-content: space-around;
+    }
+
+    #sobre {
+        padding: 180px 15%;
+    }
+
+    .card {
+        height: 320px;
+        width: 200px;
+    }
+
+    #contato form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .container-cards {
+        flex-wrap: wrap;
+    }
+
+    .card{
+        height: 400px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 40%;
+
+    }
+    footer{
+        height: unset;
+    }
+
+    footer .container-grid{
+        padding: 80px;
+        flex-direction: column;
+
+    }
+
+    footer img{
+        margin-bottom: 100px;
+    }
+
+    footer p{
+
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .redes-sociais{
+        align-items: center;
+    }
+    
 }
