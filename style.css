@@ -239,7 +239,7 @@ h2 {
     font-weight: 600;
 
     cursor: pointer;
-    transition: backgroud-coler 500ms;
+    transition: backgroud-color 500ms;
 
 }
 
@@ -438,6 +438,14 @@ footer .container-grid {
     color: var(--laranja-gamefica);
 }
 
+.menu-fechado {
+    display: none;
+}
+
+#icones-barras {
+    display: none;
+}
+
 @media screen and (max-width: 1300px) {
     header {
         position: relative;
@@ -580,7 +588,6 @@ footer .container-grid {
     }
 
     #sobre {
-
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -646,15 +653,15 @@ footer .container-grid {
         font-size: 20px;
     }
 
-    header img{
+    header img {
         width: 160px;
     }
 
-    header svg{
+    header svg {
         width: 40px;
     }
 
-    footer{
+    footer {
         width: 200px;
     }
 }
