@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="renderizarcases()">
     <div class="banner">
         <header>
             <div class="container-grid">
@@ -62,19 +62,19 @@
                 </svg>
             </button>
             <div class="botoes">
-                <button>
+                <button onclick="selecionarslide(0)">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                     </svg>
                 </button>
-                <button>
+                <button onclick="selecionarslide(1)">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                     </svg>
                 </button>
-                <button>
+                <button onclick="selecionarslide(2)">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
@@ -104,28 +104,8 @@
     <section class="container-grid" id="cases">
         <h2>Cases de Sucesso</h2>
 
-        <div class="container-cards">
+        <div class="container-cards" id="lista-cards">
 
-            <div class="card">
-                <img src="https://unsplash.it/640/425" alt="">
-                <p>Reduzimos o desperdício de comida de uma escolaem 80%</p>
-                <button>Ver mais</button>
-            </div>
-            <div class="card">
-                <img src="https://unsplash.it/640/425" alt="">
-                <p>Reduzimos o desperdício de comida de uma escolaem 80%</p>
-                <button>Ver mais</button>
-            </div>
-            <div class="card">
-                <img src="https://unsplash.it/640/425" alt="">
-                <p>Reduzimos o desperdício de comida de uma escolaem 80%</p>
-                <button>Ver mais</button>
-            </div>
-            <div class="card">
-                <img src="https://unsplash.it/640/425" alt="">
-                <p>Reduzimos o desperdício de comida de uma escolaem 80%</p>
-                <button>Ver mais</button>
-            </div>
 
         </div>
     </section>
