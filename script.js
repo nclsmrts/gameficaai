@@ -71,25 +71,6 @@ const selecionarslide = (indiceslide) => {
 }
 
 let listadecases = [
-    {
-        imagem: "https://unsplash.it/640/425?image=69",
-        descricao: "Uma empresa de tecnologian lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias"
-    },
-
-    {
-        imagem: "https://unsplash.it/640/425?image=25",
-        descricao: "Uma empresa de consultoria cria uma narrativa de gamificação para seu programa de treinamento"
-    },
-
-    {  
-        imagem: "https://unsplash.it/640/425?image=24",
-        descricao: "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo topo do ranking"
-    },
-
-    {
-        imagem: "https://unsplash.it/640/425?image=15",
-        descricao: "Uma empresa de saúde promove o bem estar deos funcionarios atraveés de um desafio de gamificação de condicionamento físico"
-    }
 
 ]
 
@@ -106,4 +87,45 @@ const renderizarcases = () => {
     })
 
     elementolista.innerHTML = template
+}
+
+const carregarcases = () => {
+    fetch("http://localhost:3000/cases")
+
+        .then(resposta => resposta.json())
+        .then((dados) => {
+            listadecases = dados
+            renderizarcases()
+        })
+}
+
+const solicitaroracmento = () => {
+    // pegar valores dos imputs
+
+    let valornome = document.getElementById("campo-nome").value
+    let valoremail = document.getElementById("campo-email").value
+    let valordescicao = document.getElementById("campo-descricao").value
+
+    // organizar objetos com os valores
+    let dadosform = {
+        nome: valornome,
+        email: valoremail,
+        descricao: valordescicao
+    }
+
+    // enviar requisição para API
+    fetch("http://localhost:3000/solicitacoes", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dadosform)
+
+    })
+        .then(resposta => console.log(resposta))
+        .catch(erro => console.log(erro))
+
+    // limoar campos
+    // mostrar alert com mensagem de sucesso
+    // caso erro mostrar alert com mensagem erro
 }

@@ -1,5 +1,28 @@
 {
-    "cases": [
-        
-    ]
+  "cases": [
+    {
+      "imagem": "https://unsplash.it/640/425?image=69",
+      "descricao": "Uma empresa de tecnologian lança um desafio de gamificação onde os funcionarios devem propor e implementar ideias"
+    },
+    {
+      "imagem": "https://unsplash.it/640/425?image=25",
+      "descricao": "Uma empresa de consultoria cria uma narrativa de gamificação para seu programa de treinamento"
+    },
+    {
+      "imagem": "https://unsplash.it/640/425?image=24",
+      "descricao": "Uma empresa de vendas implementa uma competição gamificada entre equipes que competem pelo topo do ranking"
+    },
+    {
+      "imagem": "https://unsplash.it/640/425?image=15",
+      "descricao": "Uma empresa de saúde promove o bem estar deos funcionarios atraveés de um desafio de gamificação de condicionamento físico"
+    }
+  ],
+  "solicitacoes": [
+    {
+      "id": "4487",
+      "nome": "Lula",
+      "email": "lula.ladrao@gmail.com",
+      "descricao": "O povo não deixa eu roba "
+    }
+  ]
 }
