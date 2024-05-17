@@ -99,7 +99,7 @@ const carregarcases = () => {
         })
 }
 
-const solicitaroracmento = () => {
+const solicitaroracmento = (event) => {
     // pegar valores dos imputs
 
     let valornome = document.getElementById("campo-nome").value
@@ -122,10 +122,23 @@ const solicitaroracmento = () => {
         body: JSON.stringify(dadosform)
 
     })
-        .then(resposta => console.log(resposta))
-        .catch(erro => console.log(erro))
+        .then(resposta => {
+            console.log(resposta)
 
-    // limoar campos
-    // mostrar alert com mensagem de sucesso
-    // caso erro mostrar alert com mensagem erro
+            // limoar campos
+
+            document.querySelector("#contato form").reset()
+
+            // mostrar alert com mensagem de sucesso
+            alert("Solicitação cadastrada")
+
+        })
+        .catch(erro => {
+            // caso erro mostrar alert com mensagem erro
+            console.log(erro)
+            alert("Erro desconhecido")
+        })
+
+    event.preventDefault()
+
 }
